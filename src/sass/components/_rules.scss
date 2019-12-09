@@ -1,0 +1,17 @@
+.section--rules {
+	padding: rem(69px) 0 rem(72px);
+
+	@include r($xs-breakpoint) {
+		padding-top: 0;
+		padding-bottom: rem(10px);
+	}
+
+	.tabs {
+		margin-top: rem(40px);
+
+		@include r($xs-breakpoint) {
+			margin-top: rem(29px);
+		}
+	}
+}
+

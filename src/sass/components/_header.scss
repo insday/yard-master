@@ -1,0 +1,132 @@
+.header {
+	padding: rem(21px) 0 rem(18px);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1100;
+	background-color: #fff;
+	//transition: .3s all;
+	transform: none !important;
+	box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+
+	@include r($xs-breakpoint) {
+		padding: 15px 0 11px;
+	}
+
+	//&:not(.header--contentWidth) {
+		//transform: none !important;
+	//}
+
+	&.header--contentWidth {
+		//max-width: rem(1240px);
+		//width: 100%;
+		//left: auto;
+		//background-color: transparent;
+		box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+
+		.header__logo svg > * {
+			fill: $secondary-color;
+		}
+
+		.header__burger .bar{
+
+			@include r($xs-breakpoint) {
+				background-color: $primary-color;
+			}
+		}
+
+		.header__nav {
+			//margin: 0 rem(58px) 0 rem(82px);
+		}
+
+		&[style*="transform: translate3d(0px, 0px, 0px)"] {
+
+			@include r($xs-breakpoint) {
+				background: #2A3C83;
+			}
+
+			.header__logo svg > *{
+				//fill: #fff;
+			}
+
+			.header__nav a {
+				//color: #fff;
+			}
+
+			.header__phone a {
+				//color: #fff;
+			}
+
+		}
+	}
+
+	.header__inner {
+		display: flex;
+		align-items: center;
+
+		@include r($xs-breakpoint) {
+			padding: 0 rem(16px);
+		}
+	}
+
+	.header__nav {
+		margin: 0 rem(73px) 0 rem(93px);
+
+		@include r($xs-breakpoint) {
+			display: none;
+		}
+	}
+
+	.header__phone {
+
+		@include r($xs-breakpoint) {
+			display: none;
+		}
+
+		.phone {
+			font-size: rem(16px);
+			line-height: 210%;
+			letter-spacing: 0.08em;
+		}
+	}
+
+	.header__logo {
+
+		@include r($xs-breakpoint) {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin-top: 5px;
+		}
+	}
+
+	.header__logo svg{
+		width: rem(133px);
+		height: rem(31px);
+
+		@include r($xs-breakpoint) {
+			width: rem(122px);
+			height: rem(28px);
+			position: relative;
+			top: -4px;
+		}
+
+		> * {
+			@include r($xs-breakpoint) {
+			    //fill: #fff;
+			}
+		}
+	}
+
+	.header__burger {
+		display: none;
+
+		@include r($xs-breakpoint) {
+			display: block;
+			margin-left: auto;
+		}
+	}
+}
+

@@ -1,0 +1,92 @@
+.section--location {
+	position: relative;
+	padding: rem(80px) 0;
+
+	@include r($xs-breakpoint) {
+		padding: 0;
+		display: flex;
+		flex-flow: column-reverse;
+		background-color: #F7F7F7;
+	}
+
+
+	.locationMap {
+		@include coverdiv();
+		background-color: lighten($secondary-color, 15%);
+
+		@include r($xs-breakpoint) {
+			position: relative;
+			height: rem(350px);
+		}
+	}
+
+	.textBlockPrimary {
+		margin-top: rem(35px);
+
+		@include r($xs-breakpoint) {
+			margin-top: rem(30px);
+			padding-right: rem(50px);
+		}
+	}
+
+	.section__inner {
+		display: flex;
+		justify-content: space-between;
+		padding-right: percentage(134/1144);
+
+		@include r($xs-breakpoint) {
+			padding-right: 0;
+			display: block;
+			position: static;
+		}
+
+
+		.locationButton {
+			margin-top: auto;
+
+			@include r($xs-breakpoint) {
+				position: absolute;
+				bottom: rem(30px);
+				left: 0;
+				right: 0;
+				padding: 0 rem(24px);
+			}
+		}
+	}
+}
+
+.locationBox {
+	background-color: #fff;
+	max-width: percentage(616/1144);
+	padding: rem(54px) rem(50px) rem(34px);
+
+	@include r($xs-breakpoint) {
+	    max-width: 100%;
+		padding: rem(44px) 0 0;
+		background-color: #F7F7F7;
+	}
+
+
+	&.locationBox--secondary {
+		background-color: $secondary-color;
+		color: #fff;
+	}
+
+
+	.infoList {
+		margin-top: rem(22px);
+		margin-bottom: rem(46px);
+	}
+
+	.textBlock {
+		padding-right: rem(40px);
+
+		@include r($xs-breakpoint) {
+			margin-left: -23px;
+			margin-right: -23px;
+			background-color: #fff;
+			padding: rem(46px) rem(85px) rem(45px) rem(23px);
+		}
+	}
+}
+

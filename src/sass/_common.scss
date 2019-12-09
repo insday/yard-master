@@ -1,0 +1,137 @@
+html {
+	font-family: $font-main;
+	-webkit-tap-highlight-color: transparent;
+	@include font-smoothing();
+	color: $text-color;
+	font-weight: normal;
+}
+
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	transition: .25s all;
+	text-decoration: none;
+	color: $black;
+
+	&:hover {
+		color: $primary-color;
+	}
+
+	&:active {
+		opacity: .8;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+input:focus {
+	outline: none;
+}
+
+::selection {
+	color: $white;
+	background-color: $primary-color;
+}
+
+::-moz-selection {
+	color: $white;
+	background-color: $primary-color;
+}
+
+
+:root {
+	--browser-address-bar: 0px;
+	--browser-bar: 0px;
+}
+
+.out {
+	position: relative;
+	overflow: hidden;
+}
+
+.pageWrapper {
+	position: relative;
+	display: flex;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.is-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+
+div[style*='background'] {
+	@include cover();
+}
+
+.pageSwipeContent {
+	width: percentage(1240/1360);
+
+	@include r($xs-breakpoint) {
+		width: percentage(332/375);
+	}
+
+	&.is-reverse {
+		margin-left: auto;
+		margin-right: 0;
+
+		> .swiper-container {
+
+		}
+	}
+
+	> .swiper-container {
+		margin-left: 0;
+
+		.swiper-slide:first-child {
+			//margin-left: rem(-120px);
+		}
+
+		.swiper-slide {
+			transition: .3s all;
+
+			&.swiper-slide-active {
+				opacity: 1 !important;
+			}
+		}
+
+		.swiper-slide:not(.swiper-slide-active) {
+			opacity: 0 !important;
+		}
+	}
+
+}
+
+.pageControl {
+	width: percentage(120/1360);
+	z-index: 1;
+
+	@include r($xs-breakpoint) {
+		width: percentage(45/375);
+	}
+}
+
+.fancybox-active {
+
+	@include r($xs-breakpoint) {
+		overflow: hidden;
+	}
+}

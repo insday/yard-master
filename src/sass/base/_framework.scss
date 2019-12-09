@@ -1,0 +1,29 @@
+.containerFluid,
+.container {
+	width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.container {
+	padding: 0 48px;
+
+	@include r($xs-breakpoint) {
+		padding: 0 23px;
+	}
+}
+
+.hiddenMobile {
+	@include r($mob) {
+		display: none;
+	}
+}
+
+.hiddenDesktop {
+
+	@include rmin($mob) {
+		display: none;
+	}
+}
+

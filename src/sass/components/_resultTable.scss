@@ -1,0 +1,152 @@
+.resultTable {
+	max-width: rem(1013px);
+
+	&__title {
+		font-size: rem(30px);
+
+		@include r($xs-breakpoint) {
+			line-height: rem(39px);
+		}
+	}
+
+
+	.resultTable__inner {
+
+		&:not(:first-child) {
+			margin-top: rem(50px);
+
+			@include r($xs-breakpoint) {
+				margin-top: rem(36px);
+			}
+		}
+	}
+
+	&__head {
+		font-size: rem(20px);
+		position: relative;
+		margin-bottom: rem(16px);
+
+		@include r($xs-breakpoint) {
+			font-size: rem(13px);
+			margin-bottom: rem(13px);
+		}
+	}
+
+	&__body {
+		font-size: rem(25px);
+
+		@include r($xs-breakpoint) {
+			font-size: rem(14px);
+		}
+
+		.resultTable__row {
+			position: relative;
+			//padding: 28px 0 22px;
+			padding: rem(12px) 0;
+
+			@include r($xs-breakpoint) {
+				padding: rem(23px) 0;
+			}
+
+			&:hover {
+				color: $primary-color;
+			}
+
+			&.is-active {
+
+				@include r($xs-breakpoint) {
+					margin-bottom: 51px;
+					background-color: #F5F5F5;
+					.btn {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: rem(-23px);
+				right: 0;
+				height: 1px;
+				background: #8F6D4F;
+			}
+
+			&:last-child {
+
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: rem(-23px);
+					right: 0;
+					height: 1px;
+					background: #8F6D4F;
+				}
+			}
+		}
+	}
+
+	&__row {
+		display: flex;
+
+		&:hover {
+
+			@include rmin($xs-breakpoint) {
+				.resultTable__column .btn {
+					opacity: 1;
+				}
+			}
+		}
+
+		.resultTable__column {
+			display: flex;
+			align-items: center;
+
+			&:nth-child(1) {
+				width: percentage(140/1013);
+
+				@include r($xs-breakpoint) {
+					width: percentage(47/280);
+				}
+			}
+			&:nth-child(2) {
+				width: percentage(218/1013);
+
+				@include r($xs-breakpoint) {
+					width: percentage(93/280);
+				}
+			}
+			&:nth-child(3) {
+				width: percentage(186/1013);
+
+				@include r($xs-breakpoint) {
+					width: percentage(74/280);
+				}
+			}
+			&:nth-child(4) {
+				width: percentage(470/1013);
+
+				@include r($xs-breakpoint) {
+					width: percentage(66/280);
+				}
+			}
+
+
+			.btn {
+				margin-left: auto;
+				opacity: 0;
+
+				@include r($xs-breakpoint) {
+					position: absolute;
+					top: 100%;
+					left: -20px;
+					right: 0;
+					visibility: hidden;
+				}
+			}
+		}
+	}
+}

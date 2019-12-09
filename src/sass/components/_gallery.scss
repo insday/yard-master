@@ -1,0 +1,134 @@
+.gallerySlider {
+	position: relative;
+
+	&.gallerySlider--modal {
+		display: none;
+		padding: 0;
+		background-color: transparent;
+		max-width: rem(1160px);
+
+		@include r($xs-breakpoint) {
+		    max-width: 100%;
+		}
+
+		[data-fancybox-close] {
+			width: rem(50px);
+			height: rem(50px);
+			background-color: #fff;
+		}
+
+		.swiper-pagination {
+			margin-top: 0;
+			bottom: rem(20px);
+		}
+
+
+	}
+
+
+	.fancybox-close-small {
+
+		@include r($xs-breakpoint) {
+			top: 0 !important;
+			right: 0 !important;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.swiper-slide {
+		text-align: center;
+
+		img {
+			width: 100%;
+		}
+
+		a {
+			display: block;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.swiper-navigation {
+		//display: flex;
+		//align-items: center;
+		//justify-content: flex-end;
+		//margin-top: rem(16px);
+		//position: relative;
+
+		@include r($xs-breakpoint) {
+			margin-top: rem(40px);
+		}
+
+		.swiper-pagination {
+			//display: flex;
+			//align-items: center;
+			//justify-content: center;
+			//position: absolute;
+			//left: 50%;
+			//top: 50%;
+			//transform: translate(-50%, -50%);
+			margin-top: 30px;
+			width: 100%;
+
+			@include r($xs-breakpoint) {
+				margin-top: 0;
+			}
+
+			&-bullet {
+				margin: 0 rem(8px);
+				width: rem(9px);
+				height: rem(9px);
+				border-width: 2px;
+
+				&-active {
+					border-color: $primary-color
+				}
+			}
+		}
+
+		.swiper-button {
+			//position: relative;
+			//top: 0;
+			//right: 0;
+			//left: 0;
+			background-image: none;
+			width: rem(80px);
+			height: rem(80px);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			//margin: 0 5px;
+			background-color: $primary-color;
+			margin-top: 0;
+			top: 50%;
+			transform: translateY(-50%);
+
+			@include r($xs-breakpoint) {
+				display: none;
+			}
+
+			&-next {
+				right: 0;
+			}
+
+			&-prev {
+				left: 0;
+				background-color: #fff;
+
+				svg {
+					fill: $primary-color;
+				}
+			}
+
+			svg {
+				width: rem(15px);
+				height: rem(24px);
+			}
+		}
+	}
+}

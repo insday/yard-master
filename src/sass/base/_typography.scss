@@ -1,0 +1,181 @@
+//@include font-face('Black', 900);
+
+@font-face {
+	font-family: 'Muller';
+	src: url('../fonts/MullerRegular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/MullerRegular.woff') format('woff'),
+	url('../fonts/MullerRegular.ttf') format('truetype'),
+	url('../fonts/MullerRegular.svg#MullerRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Muller';
+	src: url('../fonts/MullerBold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/MullerBold.woff') format('woff'),
+	url('../fonts/MullerBold.ttf') format('truetype'),
+	url('../fonts/MullerBold.svg#MullerBold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Muller';
+	src: url('../fonts/MullerLight.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/MullerLight.woff') format('woff'),
+	url('../fonts/MullerLight.ttf') format('truetype'),
+	url('../fonts/MullerLight.svg#MullerLight') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+.section__title {
+	font-weight: 300;
+	font-size: rem(70px);
+	line-height: 110%;
+	letter-spacing: 0.05em;
+	color: #2A3C83;
+
+	@include r($xs-breakpoint) {
+		font-size: rem(30px);
+		font-weight: normal;
+		line-height: 1;
+		letter-spacing: 0.05em;
+	}
+
+	&.section__title--white {
+		color: #fff;
+	}
+
+	&.section__title--md {
+		font-size: rem(50px);
+		font-weight: normal;
+
+		@include r($xs-breakpoint) {
+			font-size: rem(33px);
+			line-height: 120%;
+		}
+
+		small {
+			margin-bottom: rem(32px);
+		}
+	}
+
+	&.section__title--sm {
+		font-size: rem(40px);
+		font-weight: normal;
+		letter-spacing: 0;
+
+		@include r($xs-breakpoint) {
+			font-size: rem(30px);
+		}
+	}
+
+
+
+	small {
+		font-size: rem(10px);
+		line-height: 130%;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #B6B5C3;
+		display: block;
+		margin-bottom: rem(18px);
+
+		strong {
+			font-weight: 700;
+		}
+	}
+
+
+	+ .textBlock {
+		margin-top: rem(39px);
+
+		@include r($xs-breakpoint) {
+			margin-top: 21px;
+		}
+	}
+}
+
+.textBlock {
+	font-size: rem(20px);
+	line-height: 130%;
+	color: #2A3C83;
+
+	@include r($xs-breakpoint) {
+		font-size: rem(16px);
+		line-height: 140%;
+	}
+
+	&.textBlock--uppercase {
+		font-size: rem(14px);
+		line-height: 150%;
+		text-transform: uppercase;
+		font-weight: 500;
+
+		@include r($xs-breakpoint) {
+			font-size: rem(12px);
+			line-height: rem(18px);
+		}
+	}
+
+	&.textBlock--white {
+		color: #fff;
+	}
+
+	+ .sectionButton {
+		margin-top: rem(66px);
+
+		.sectionButton__inner {
+			display: inline-flex;
+			flex-flow: column;
+			justify-content: center;
+			align-content: center;
+
+
+			.btn:not(:first-child) {
+				margin-top: 23px;
+			}
+		}
+	}
+
+	&.textBlock--xs {
+		font-size: rem(16px);
+		line-height: rem(21px);
+	}
+
+	&.textBlock--sm {
+		font-size: rem(18px);
+		line-height: rem(23px);
+
+		@include r($xs-breakpoint) {
+			font-size: rem(16px);
+			line-height: rem(22px);
+		}
+	}
+
+	&.textBlock--md {
+		font-size: rem(25px);
+		line-height: 130%;
+
+		@include r($xs-breakpoint) {
+			font-size: rem(20px);
+			font-weight: 700;
+		}
+	}
+}
+
+
+.textBlockPrimary {
+	font-size: rem(15px);
+	line-height: 150%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: $primary-color;
+
+	@include r($xs-breakpoint) {
+		font-size: rem(12px);
+		font-weight: 700;
+	}
+}

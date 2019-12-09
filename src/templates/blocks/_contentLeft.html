@@ -1,0 +1,683 @@
+<div class="swiper-slide pageSwipeContent__column">
+    <div class="section section--concept" id="concept">
+        <div class="container section__inner">
+            <div class="section__row">
+                <div class="section__left">
+                    <div class="section__title">
+                        <small><b>Факты</b> о проекте в цифрах</small>
+                        <span>Концепция</span>
+                    </div>
+                </div>
+
+                <div class="section__right">
+                    <div class="textBlock">
+                        Yard Residence – восьмиэтажный комплекс. Он включает в себя современные
+                        апартаменты от 19 до 85 кв. метров. Комплекс построен по монолитной
+                        технологии строительства
+                    </div>
+
+                    <div class="sectionBottom hiddenMobile">
+                        <a href="#" class="btn btn--link" data-fancybox-text-modal
+                           data-src="#modal1">Больше
+                            о концепции</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section__row">
+                <div class="section__left">
+                    <div class="conceptBox">
+                        <ul class="conceptBoxList">
+                            <li class="conceptBoxList__item">
+                                <div class="conceptBoxList__numb">29</div>
+                                <div class="conceptBoxList__description">
+                                    Метров средняя площадь апартаментов
+                                </div>
+                            </li>
+                            <li class="conceptBoxList__item">
+                                <div class="conceptBoxList__numb">2</div>
+                                <div class="conceptBoxList__description">
+                                    Минуты пешком до&nbsp;Невского проспекта
+                                </div>
+                            </li>
+                            <li class="conceptBoxList__item">
+                                <div class="conceptBoxList__numb">
+                                    3.8
+                                </div>
+                                <div class="conceptBoxList__description">
+                                    Метра высота потолков в&nbsp;номерах
+                                </div>
+                            </li>
+                            <li class="conceptBoxList__item">
+                                <div class="conceptBoxList__numb">
+                                    24/7
+                                </div>
+                                <div class="conceptBoxList__description">
+                                    Безопасность и обслуживание в апартаментах
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="sectionBottom hiddenDesktop">
+                            <a href="#" class="btn btn--link" data-fancybox-text-modal
+                               data-src="#modal1">Больше
+                                о концепции</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section__right">
+                    <div class="conceptPicture"
+                         style="background-image: url('img/concept_photo.jpg');"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section--location" id="location">
+
+        <div class="locationMap" id="locationMapPreview"></div>
+
+        <div class="container section__inner">
+
+            <div class="locationBox">
+                <div class="section__title">
+                    <small>
+                        <strong>Расположение</strong> в центре петербурга
+                    </small>
+                    Место
+                </div>
+
+                <ul class="infoList">
+                    <li class="infoList__item">
+                        <div class="infoList__title">5</div>
+                        <div class="infoList__subtitle">
+                            минут на автомобиле до Московского вокзала
+                        </div>
+                    </li>
+                    <li class="infoList__item">
+                        <div class="infoList__title">
+                            9
+                        </div>
+                        <div class="infoList__subtitle">
+                            Пешком до центра города и Невского проспекта
+                        </div>
+                    </li>
+                    <li class="infoList__item">
+                        <div class="infoList__title">
+                            16
+                        </div>
+                        <div class="infoList__subtitle">
+                            Магазинов и торговых центров в пешей доступности
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="textBlock textBlock--uppercase">
+                    В пешей доступности — центральные набережные, мост Александра Невского,
+                    нескольких станций метро, десятки бутиков, ресторанов, бизнес-центров и
+                    супермаркетов.
+                </div>
+            </div>
+
+            <div class="locationButton">
+                <a href="javascript:void(0);" class="btn btn--primary" data-toggle-modal data-src="#modalMap">
+                    {{ mixins.icon('pin') }}
+                    <span>Инфраструктура района</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section section--advantages mobileGray" id="services" style="background-color: #F5F5F5;">
+        <div class="container section__inner">
+            <div class="section__left">
+                <div class="section__title">
+                    <small>
+                        <strong>преимущества</strong> проекта
+                    </small>
+                    Плюсы
+                </div>
+
+                <div class="textBlock textBlock--sm">
+                    Комплекс апартаментов бизнес-класса, расположенный в самом центре
+                    Санкт-Петербурга, в 2 минутах ходьбы от Невского проспекта.
+                </div>
+
+                <div class="sectionButton">
+                    <div class="sectionButton__inner">
+                        <a href="#" class="btn btn--secondary">
+                            Управляющая компания
+                        </a>
+                        <a href="#" class="btn btn--link btn--sm btn--colorPrimary">
+                            Доверительное управление
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="section__right">
+
+
+                {% set advantages = [
+                    {
+                        icon: '<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5022 0.280762C16.225 0.280762 11.9583 4.54743 11.9583 9.82462C11.9583 11.7334 12.5197 13.5299 13.5303 14.9895L6.68114 21.8387L4.09869 24.4211L1.17939 27.3404C0.842547 27.6772 0.842547 28.2387 1.17939 28.5755C1.29167 28.6878 1.51623 28.8001 1.74079 28.8001C1.96535 28.8001 2.18992 28.6878 2.3022 28.5755L4.54781 26.3299L8.02851 29.8106C8.14079 29.9229 8.36535 30.0351 8.58991 30.0351C8.81448 30.0351 9.03904 29.9229 9.15132 29.8106C9.48816 29.4737 9.48816 28.9123 9.15132 28.5755L5.67062 25.0948L7.13027 23.6351L10.611 27.1158C10.7232 27.2281 10.9478 27.3404 11.1724 27.3404C11.3969 27.3404 11.6215 27.2281 11.7338 27.1158C12.0706 26.779 12.0706 26.2176 11.7338 25.8808L8.25307 22.4001L14.4285 16.2246C16.1127 18.0211 18.5829 19.2562 21.3899 19.2562C26.6671 19.2562 30.9338 14.9895 30.9338 9.71234C31.0461 4.54743 26.7794 0.280762 21.5022 0.280762ZM13.7548 9.82462C13.7548 5.55795 17.2355 1.96497 21.6145 1.96497C25.8811 1.96497 29.4741 5.44567 29.4741 9.82462C29.4741 14.0913 25.9934 17.6843 21.6145 17.6843C17.2355 17.572 13.7548 14.0913 13.7548 9.82462Z" fill="#8F6D4F"/></svg>',
+                        text: 'Консьерж сервис'
+                    },{
+                        icon: '<svg width="28" height="35" viewBox="0 0 28 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.8913 7.09829H20.9615C20.6246 3.61759 17.7053 0.922852 14.1123 0.922852C10.5193 0.922852 7.60005 3.61759 7.26321 7.09829H3.33338C1.76145 7.09829 0.526367 8.33338 0.526367 9.90531V31.6878C0.526367 33.2597 1.76145 34.4948 3.33338 34.4948H25.0036C26.5755 34.4948 27.8106 33.2597 27.8106 31.6878V9.90531C27.6983 8.33338 26.3509 7.09829 24.8913 7.09829ZM26.0141 31.6878C26.0141 32.2492 25.565 32.8106 24.8913 32.8106H3.22111C2.6597 32.8106 2.0983 32.3614 2.0983 31.6878V9.90531C2.0983 9.3439 2.54742 8.7825 3.22111 8.7825H7.26321H8.16146H9.0597H19.2772H20.1755H21.0737H25.1158C25.6772 8.7825 26.2386 9.23162 26.2386 9.90531V31.6878H26.0141ZM14.0001 2.60706C16.5825 2.60706 18.7158 4.51583 19.165 7.09829H8.94742C9.28426 4.62811 11.4176 2.60706 14.0001 2.60706Z" fill="#8F6D4F"/></svg>',
+                        text: 'РЕстораны и&nbsp;магазины'
+                    },{
+                        icon: '<svg width="25" height="32" viewBox="0 0 25 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4705 1.62802C14.9091 0.842057 13.8986 0.392944 12.8881 0.392944C11.8775 0.392944 10.9793 0.842057 10.3056 1.62802C6.8249 6.34381 0.874023 14.9894 0.874023 19.7052C0.874023 26.3298 6.2635 31.607 12.7758 31.607C19.2881 31.607 24.9021 26.2175 24.9021 19.7052C24.9021 14.9894 18.9512 6.34381 15.4705 1.62802ZM13.0003 29.9228C7.38631 29.9228 2.78279 25.3193 2.78279 19.7052C2.78279 16.6736 6.03894 10.3859 11.8775 2.63856C12.1021 2.30172 12.5512 2.07715 13.1126 2.07715C13.5617 2.07715 14.0109 2.30172 14.3477 2.63856C20.074 10.3859 23.4424 16.6736 23.4424 19.7052C23.2179 25.3193 18.6144 29.9228 13.0003 29.9228Z" fill="#8F6D4F"/></svg>',
+                        text: 'Клининговая служба'
+                    },{
+                        icon: '<svg width="37" height="34" viewBox="0 0 37 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M35.0667 21.2667L31.1369 5.21053C30.4632 2.62807 28.3299 0.831582 25.8597 0.719301C24.2878 0.60702 22.8281 1.16842 21.7053 2.29122C20.5825 3.41403 19.9088 4.87369 19.9088 6.44562V9.14035H16.2036V6.44562C16.2036 4.87369 15.5299 3.41403 14.4071 2.29122C13.2843 1.16842 11.8246 0.60702 10.2527 0.719301C7.78252 0.831582 5.53691 2.74035 4.97551 5.21053L1.04568 21.2667C0.372 22.5018 0.0351562 23.8491 0.0351562 25.1965C0.0351562 29.6877 3.62813 33.2807 8.11936 33.2807C12.386 33.2807 15.979 29.9123 16.2036 25.5333V25.4211V19.3579H19.9088V25.4211V25.5333C20.1334 29.8 23.6141 33.2807 27.993 33.2807C32.4843 33.2807 36.0773 29.6877 36.0773 25.1965C36.0773 23.8491 35.7404 22.5018 35.0667 21.2667ZM25.6352 2.29122C25.7474 2.29122 25.7474 2.29122 25.8597 2.29122C27.6562 2.4035 29.2281 3.75088 29.6773 5.54737L32.8211 18.5719C32.5966 18.4596 32.372 18.2351 32.1474 18.1228L31.9229 18.0105C31.8106 17.8982 31.6983 17.8982 31.4737 17.786H31.3615C31.3615 17.786 31.2492 17.786 31.2492 17.6737C31.1369 17.5614 31.0246 17.5614 30.8001 17.4491C30.6878 17.4491 30.6878 17.4491 30.5755 17.3368H30.4632C30.351 17.3368 30.2387 17.2246 30.0141 17.2246C29.9018 17.2246 29.7895 17.2246 29.7895 17.1123H29.6773C29.565 17.1123 29.4527 17.1123 29.3404 17C29.2281 17 29.0036 17 28.8913 16.8877H28.779C28.6667 16.8877 28.6667 16.8877 28.5544 16.8877C28.2176 16.8877 27.993 16.8877 27.7685 16.8877C27.4316 16.8877 27.0948 16.8877 26.8702 17C26.758 17 26.758 17 26.6457 17C26.4211 17 26.1966 17.1123 25.972 17.1123L25.6352 17.2246C25.4106 17.3368 25.186 17.3368 24.9615 17.4491H24.8492H24.7369C24.4001 17.5614 24.1755 17.6737 23.9509 17.786C23.7264 17.8982 23.5018 18.0105 23.2773 18.2351L23.165 18.3474L23.0527 18.4597C22.9404 18.5719 22.7159 18.6842 22.6036 18.9088L22.379 19.1333C22.2667 19.2456 22.0422 19.4702 21.9299 19.5825C21.9299 19.5825 21.9299 19.6947 21.8176 19.6947L21.7053 19.807C21.5931 19.9193 21.4808 20.0316 21.3685 20.1439V6.22105C21.3685 5.09824 21.8176 4.08773 22.6036 3.30176C23.5018 2.74036 24.5124 2.29122 25.6352 2.29122ZM27.993 18.6842C28.2176 18.6842 28.5545 18.6842 28.779 18.6842H28.8913H29.0036C29.2281 18.6842 29.4527 18.7965 29.6773 18.7965H29.7895C30.3509 18.9088 30.8001 19.1333 31.2492 19.4702C31.4738 19.5825 31.6983 19.6947 31.8106 19.9193L31.9229 20.0316C32.372 20.3684 32.7088 20.7053 33.0457 21.1544L33.158 21.2667C33.2702 21.4912 33.3825 21.7158 33.6071 21.8281C34.1685 22.8386 34.5053 23.9614 34.5053 25.0842C34.5053 28.6772 31.586 31.5965 27.993 31.5965C24.5123 31.5965 21.7053 28.9018 21.4808 25.4211V25.3088V25.1965C21.4808 25.1965 21.4808 25.1965 21.4808 25.0842C21.4808 21.6035 24.4001 18.6842 27.993 18.6842ZM19.9088 17.6737H16.2036V10.7123H19.9088V17.6737ZM4.07726 20.0316C4.07726 20.0316 4.18954 20.0316 4.07726 20.0316L4.18954 19.9193C4.4141 19.807 4.52638 19.6947 4.75094 19.5825L4.86323 19.4702C5.31235 19.2456 5.76147 19.0211 6.32287 18.9088H6.43515C6.65971 18.9088 6.88427 18.7965 6.99656 18.7965H7.10884H7.22112C7.55796 18.7965 7.78252 18.7965 8.00708 18.7965C11.6001 18.7965 14.5194 21.7158 14.5194 25.3088V25.4211V25.6456C14.4071 29.1263 11.4878 31.8211 8.00708 31.8211C4.4141 31.8211 1.49481 28.9018 1.49481 25.3088C1.49481 24.186 1.83165 23.0632 2.39305 22.0526C2.50533 21.8281 2.61761 21.7158 2.72989 21.4912L2.84217 21.3789C3.2913 20.8175 3.74042 20.3684 4.07726 20.0316ZM13.7334 19.2456C13.6211 19.1333 13.6211 19.1333 13.5088 19.0211C13.3966 18.9088 13.172 18.7965 13.0597 18.6842C12.9474 18.5719 12.9474 18.5719 12.8352 18.4597C12.6106 18.3474 12.386 18.1228 12.1615 18.0105C11.9369 17.8982 11.6001 17.786 11.3755 17.6737C11.2632 17.6737 11.2632 17.6737 11.1509 17.5614H11.0387C10.8141 17.4491 10.5895 17.4491 10.365 17.3368C10.2527 17.3368 10.1404 17.2246 10.0281 17.2246C9.80358 17.2246 9.57902 17.1123 9.35446 17.1123H9.24217C9.12989 17.1123 9.12989 17.1123 9.01761 17.1123C8.68077 17.1123 8.34392 17 8.11936 17C7.8948 17 7.67024 17 7.3334 17C7.22112 17 7.22112 17 7.10884 17H6.88428C6.772 17 6.65972 17 6.54744 17C6.43516 17 6.32288 17.1123 6.21059 17.1123C6.09831 17.1123 5.98603 17.1123 5.87375 17.2246C5.76147 17.2246 5.64919 17.3368 5.42463 17.3368L5.20007 17.4491C5.08779 17.4491 4.9755 17.5614 4.75094 17.6737C4.63866 17.6737 4.63866 17.786 4.52638 17.786C4.4141 17.8982 4.30182 17.8982 4.07726 18.0105C3.96498 18.0105 3.96498 18.1228 3.8527 18.1228C3.74042 18.2351 3.62814 18.2351 3.40358 18.3474L3.2913 18.4597L3.17902 18.5719L6.32287 5.54737C6.772 3.6386 8.34393 2.29122 10.1404 2.29122C11.2632 2.17894 12.386 2.62807 13.172 3.41403C13.958 4.2 14.4071 5.21053 14.4071 6.33334V20.2561C14.2948 20.1439 14.1825 20.0316 14.0702 19.9193C14.0702 19.807 13.958 19.807 13.958 19.6947C13.958 19.5825 13.8457 19.4702 13.7334 19.2456Z" fill="#8F6D4F"/></svg>',
+                        text: 'красивый&nbsp;вид из&nbsp;окон'
+                    }
+                ] %}
+
+                <ul class="advantagesList">
+                    {% for item in advantages %}
+                        <li class="advantagesList__item">
+                            <a href="javascript:void(0);" class="advantagesList__link"
+                               data-fancybox-text-modal data-src="#modal2"></a>
+                            <div class="advantagesList__icon">
+                                {{ item.icon|safe }}
+                            </div>
+                            <div class="advantagesList__text">
+                                {{ item.text|safe }}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="sectionButton">
+                    <a href="#" class="btn btn--secondary">
+                        Управляющая компания
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section--advantages section--advantagesSecondary" id="advantages"
+         style="background-color: #F5F5F5;">
+        <div class="section__bg hiddenMobile" style="background-image: url('img/advantages_left_bg.jpg');"></div>
+        <div class="advantagesBlock">
+            <div class="advantagesBlock__inner">
+                <div class="section__title  section__title--md">
+                    <small>
+                        <strong>преимущества</strong> жизни в апартаментах
+                    </small>
+
+                    Преимущества  проживания
+                </div>
+
+                <div class="textBlock textBlock--sm">
+                    Комплекс апартаментов бизнес-класса, расположенный в самом центре
+                    Санкт-Петербурга,<br> в 2 минутах ходьбы от Невского проспекта.
+                </div>
+
+
+                <div class="section__bg hiddenDesktop" style="background-image: url('img/advantages_left_bg.jpg');"></div>
+
+                <ul class="advantageRow advantageRow--white">
+                    {% for item in ['Сравнение инвестиций', 'Программы доходности', 'Прогноз дохода', 'Контроль прибыли', 'Гарантии возврата вложений'] %}
+                        <li class="advantageRow__item">
+                            <a href="javascript:void(0);" class="advantageRow__link"
+                               data-fancybox-text-modal data-src="#modal3"></a>
+                            <div class="advantageRow__title">{{ item }}</div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section--units">
+        <div class="container section__inner">
+            <div class="section__left">
+                <div class="section__title">
+                    <small>
+                        <strong>Стоимость</strong> покупки и аренды
+                    </small>
+                    Про деньги
+                </div>
+
+                <div class="textBlock textBlock--sm">
+                    Мы представляем доходную программу по трем видам номеров, с предполагаемым
+                    доходом:
+                </div>
+            </div>
+            {#			<div class="section__right">#}
+            {#				<a href="#" class="btn btn--filled">#}
+            {#					<svg width="24" height="21" viewBox="0 0 24 21" fill="none"#}
+            {#						 xmlns="http://www.w3.org/2000/svg">#}
+            {#						<path#}
+            {#							d="M11.5 14H1V1H23V14H19H18V15V18.5266L12.0914 14.1936L11.8274 14H11.5Z"#}
+            {#							stroke="white"#}
+            {#							stroke-width="2"/>#}
+            {#					</svg>#}
+            {#					<span>Отправить заявку</span>#}
+            {#				</a>#}
+            {#			</div>#}
+            <div class="section__center">
+
+                <div class="units tabs">
+                    <div class="unitsContainer">
+                        <div class="unitsNav">
+                            <div class="unitsCategorySelect">
+                                <select name="unitsCategorySelect" class="js-select">
+                                    <option value="1" data-price="от 4,3 млн">
+                                        SMART
+                                    </option>
+                                    <option value="1" data-price="от 6,3 млн" selected>
+                                        SUPERIOR
+                                    </option>
+                                    <option value="1" data-price="от 8,3 млн">
+                                        STANDARD
+                                    </option>
+                                    <option value="1" data-price="от 10,3 млн">
+                                        RESIDENCE
+                                    </option>
+                                    <option value="1" data-price="от 12,3 млн">
+                                        RESIDENCE 2
+                                    </option>
+                                </select>
+                            </div>
+                            <ul class="unitsCategory tabsList">
+                                {% for item in ['SMART', 'SUPERIOIR', 'STANDARD', 'RESIDENCE', 'YARD RESIDENCE'] %}
+                                    <li class="unitsCategory__item">
+                                        <a href="javascript:void(0);" class="tab{{ loop.index }}{% if loop.index === 2 %} is-active{% endif %}"
+                                           data-unit-category="{{ item }}">{{ item }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="tabsBox">
+                            {% for item in  ['SMART', 'SUPERIOIR', 'STANDARD', 'RESIDENCE', 'YARD RESIDENCE']%}
+                                <div class="tabs__con tabs__con_tab{{ loop.index }}{% if loop.index === 2 %} is-active{% endif %}">
+                                    <div class="unitsBody">
+                                        <div class="unitCard">
+                                            <div class="unitCard__left">
+                                                <div class="unitCard__head">
+                                                    <div class="unitCard__title">{{item}}</div>
+                                                    <div class="unitCard__info">
+                                                        <ul>
+                                                            {% for item in ['от 4,3 млн', 'от 19 до 24 m2'] %}
+                                                                <li>{{ item }}</li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="unitCard__description">
+                                                    <div class="unitCardTable">
+                                                        <div class="unitCardTable__title">Доходность</div>
+                                                        <div class="unitCardTable__body">
+                                                            <table>
+                                                                <thead>
+                                                                {% for item in ['год', 'Доход в год', ' В месяц'] %}
+                                                                    <th>{{ item }}</th>
+                                                                {% endfor %}
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>2020</td>
+                                                                    <td>574 785 Р</td>
+                                                                    <td>23 780 Р</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2021</td>
+                                                                    <td>624 488 Р</td>
+                                                                    <td>26 250 Р</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2022</td>
+                                                                    <td>648 718 Р</td>
+                                                                    <td>28 380 Р</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2023</td>
+                                                                    <td>703 963 Р</td>
+                                                                    <td>34 590 Р</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="unitCardTable__description">
+                                                            <div class="unitCardTable__titleSmall">
+                                                                Инвестиции:
+                                                            </div>
+                                                            <div class="unitCardTable__price">
+                                                                5 750 000 Р
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="unitCard__right">
+                                                <div class="unitCard__photo">
+                                                    <img src="img/unit_preview.svg" alt="SUPERIOR">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="unitsOptions">
+                                        <div class="unitsFloor">
+
+                                            <div class="unitsFloor__title">
+                                                Выберите свои апартаменты сейчас:
+                                            </div>
+                                            <div class="unitsFloor__body">
+                                                <div class="unitsFloor__titleSm">
+                                                    Этаж:
+                                                </div>
+                                                <ul class="unitsFloor__list">
+                                                    {% for i in range(0,8) %}
+                                                        <li class="unitsFloorItem">
+                                                            <input type="radio" value="{{ loop.index }}"
+                                                                   name="floor333_{{ item }}"{% if loop.index === 1 %} checked{% endif %}>
+                                                            <span class="unitsFloorItem__label unitsFloorItem__label--circle">{{ loop.index }}</span>
+                                                        </li>
+                                                    {% endfor %}
+
+                                                    <li class="unitsFloorItem">
+                                                        <input type="radio" value="other" name="floor333_{{ item }}">
+                                                        <span class="unitsFloorItem__label">Любой</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="unitsResults">
+                                            <ul class="unitsResultsCategory">
+                                                <li>
+                                                    <a href="javascript:void(0);"
+                                                       class="btn btn--linkBorder is-active">Показать
+                                                        варианты</a>
+                                                </li>
+                                            </ul>
+
+                                            <div class="unitsResults__table">
+                                                <div class="resultTable">
+                                                    <div class="resultTable__title">
+                                                        Свободно 4 апаратамента:
+                                                    </div>
+                                                    <div class="resultTable__inner">
+                                                        <div class="resultTable__head">
+                                                            <div class="resultTable__row">
+                                                                <div class="resultTable__column">Этаж</div>
+                                                                <div class="resultTable__column">Тип номера
+                                                                </div>
+                                                                <div class="resultTable__column">Площадь</div>
+                                                                <div class="resultTable__column">Стоимость</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="resultTable__body">
+                                                            {% for i in range(0,5) %}
+                                                                <div class="resultTable__row">
+                                                                    <div class="resultTable__column">4</div>
+                                                                    <div class="resultTable__column">{{item}}
+                                                                    </div>
+                                                                    <div class="resultTable__column">34 m2</div>
+                                                                    <div class="resultTable__column">5.566.456
+
+                                                                        <a href="javascript:void(0);"
+                                                                           class="btn btn--filled"
+                                                                           data-fancybox=""
+                                                                           data-src="#callback">
+                                                                            <svg width="24" height="21"
+                                                                                 viewBox="0 0 24 21" fill="none"
+                                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M11.5 14H1V1H23V14H19H18V15V18.5266L12.0914 14.1936L11.8274 14H11.5Z"
+                                                                                      stroke="white"
+                                                                                      stroke-width="2"/>
+                                                                            </svg>
+                                                                            <span>Отправить заявку</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            {% endfor %}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section section--rules" style="background-color: #F5F5F5;">
+        <div class="container section__inner">
+            <div class="section__title section__title--sm">
+                Условия покупки
+            </div>
+
+            <div class="tabs">
+                <ul class="tabsList">
+                    {% for item in ['Ипотека', 'Рассрочка', '100% оплата', 'Trade In'] %}
+                        <li>
+                            <a href="#"
+                               class="tab{{ loop.index }}{% if loop.index === 1 %} is-active{% endif %}">{{ item }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div class="tabsBox">
+                    <div class="tabs__con tabs__con_tab1 is-active">
+                        <article>
+                            <h2>Ипотека</h2>
+                            <p>
+                                Застройщик – компания “группа “ЯРД” создана профессионалами рынка,
+                                успешно реализующими проекты недвижимости с 1993 года. Среди
+                                приоритетных целей, которые ставит перед собой “группа “ЯРД” —
+                                сохранение градостроительных традиций Санкт-Петербурга, обеспечение
+                                комфортных условий проживания для его жителей, повышение престижа
+                                города.
+                            </p>
+
+                            <a href="javascript:void(0);"
+                               class="btn btn--filled"
+                               data-fancybox=""
+                               data-src="#callback">
+                                <svg width="24" height="21"
+                                     viewBox="0 0 24 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 14H1V1H23V14H19H18V15V18.5266L12.0914 14.1936L11.8274 14H11.5Z"
+                                          stroke="white"
+                                          stroke-width="2"/>
+                                </svg>
+                                <span>Узнать больше</span>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section--about">
+        <div class="container section__inner">
+            <div class="section__title">
+                <small>
+                    <strong>надежная</strong> компания
+                </small>
+                Застройщик
+            </div>
+            <div class="section__left">
+                <div class="textBlock textBlock--xs">
+                    Застройщик – компания “группа “ЯРД” создана профессионалами рынка, успешно
+                    реализующими проекты недвижимости с 1993 года. Среди приоритетных целей, которые
+                    ставит перед собой “группа “ЯРД” — сохранение градостроительных традиций
+                    Санкт-Петербурга, обеспечение комфортных условий проживания для его жителей,
+                    повышение престижа города.
+                </div>
+            </div>
+            <div class="section__right">
+                <div class="textBlock textBlock--md">
+                    В портфеле компании еще два перспективных&nbsp;проекта – у Дворца Спорта
+                    «Юбилейный»
+                    и на Крестовском острове.
+                </div>
+
+                <div class="sectionButton">
+                    <a href="#" class="btn btn--secondary btn--md">
+                        Сайт девелопера
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section section--documents">
+        <div class="container section__inner">
+            <div class="section__left">
+                <div class="section__title">
+                    <small>
+                        <strong>Все</strong>
+                        под контролем
+                    </small>
+                    Документы
+                </div>
+
+                <div class="sectionButton">
+                    <a href="#" class="btn btn--secondary btn--md">
+                        Архив документации
+                    </a>
+                </div>
+            </div>
+            <div class="section__right">
+                <ul class="documentsList">
+                    <li class="documentsList__item">
+                        <div class="card card--document">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__icon">
+                                <img src="img/pdf.svg" alt="">
+                            </div>
+                            <div class="card__title">
+                                Проектная декларация. Редакция №16 от 21.06.2019 (pdf)
+                            </div>
+                        </div>
+                    </li>
+                    <li class="documentsList__item">
+                        <div class="card card--document">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__icon">
+                                <img src="img/doc.svg" alt="">
+                            </div>
+                            <div class="card__title">
+                                Положительное заключение экспертизы проектной документации от
+                                03.07.2018
+                            </div>
+                        </div>
+                    </li>
+                    <li class="documentsList__item">
+                        <div class="card card--document">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__icon">
+                                <img src="img/pdf.svg" alt="">
+                            </div>
+                            <div class="card__title">
+                                Бухгалтерская отчетность за 1 квартал 2019 г. (pdf)
+                            </div>
+                        </div>
+                    </li>
+                    <li class="documentsList__item">
+                        <div class="card card--document">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__icon">
+                                <img src="img/pdf.svg" alt="">
+                            </div>
+                            <div class="card__title">
+                                Образец ДДУ (doc) от 01.04.2019
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="sectionButton">
+                    <a href="#" class="btn btn--secondary btn--md">
+                        Архив документации
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section--contacts" id="contacts">
+        <div class="container section__inner">
+            <div class="section__title">
+                <small>
+                    <strong>свяжитесь</strong> с нами
+                </small>
+                Контакты
+            </div>
+
+            <div class="contacts contacts--row">
+                <div class="contacts__column">
+                    <div class="contacts__title">
+                        Офис продаж
+                    </div>
+                    <ul class="contactsAddress">
+                        <li class="contactsAddress__item">
+                            <p>
+                                Литейный проспект, 26<br>
+                                Санкт-Петербург, Россия
+                            </p>
+                        </li>
+                        <li class="contactsAddress__item">
+                            <p>
+                                Время работы: с 9:00 до 20:00
+                            </p>
+                            <p>
+                                СБ-ВС: с 11:00 до 19:00
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contacts__column">
+                    <div class="contacts__title">
+                        Местоположение объекта
+                    </div>
+                    <ul class="contactsAddress">
+                        <li class="contactsAddress__item">
+                            <p>
+                                Херсонская ул., 43/12<br>
+                                Санкт-Петербург, Россия
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contacts__column">
+                    <div class="contactsPhone">
+                        <a href="tel:+7 (812) 210-69-97">+7 (812) 210-69-97</a>
+                    </div>
+                    <div class="contactsMail">
+                        <a href="mailto:sale@yard.ru">sale@yard.ru</a>
+                    </div>
+                    <div class="contactsCallback">
+                        <a href="javascript:void(0);" class="btn btn--filled" data-fancybox
+                           data-src="#callback">
+                            Оставить заявку
+                        </a>
+                    </div>
+                    <div class="contactsLink">
+                        <a href="#" class="btn btn--link btn--colorSecondary">Скачать буклет</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+

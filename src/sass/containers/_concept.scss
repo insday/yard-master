@@ -1,0 +1,172 @@
+.section--concept {
+	background-color: #fff;
+
+	&[style*='background'] {
+		position: relative;
+
+		&:before {
+			content: '';
+			@include coverdiv();
+			background: linear-gradient(0deg, rgba(42, 56, 115, 0.75), rgba(42, 56, 115, 0.75));
+		}
+	}
+
+	.section__inner {
+		padding-top: rem(166px);
+		padding-bottom: rem(100px);
+
+		@include r($xs-breakpoint) {
+			padding-top: rem(118px);
+			padding-bottom: rem(31px);
+			flex-flow: wrap;
+		}
+	}
+
+	.section__row {
+		display: flex;
+		justify-content: space-between;
+
+		@include r($xs-breakpoint) {
+		    flex-flow: wrap;
+		}
+
+
+		&:not(:first-child) {
+			margin-top: rem(60px);
+
+			@include r($xs-breakpoint) {
+				margin-top: 0;
+				margin-left: -23px;
+				margin-right: -23px;
+			}
+
+
+			.section__right {
+
+				@include r($xs-breakpoint) {
+					order: -1;
+					padding-right: 0;
+				}
+			}
+		}
+
+		.textBlock:first-child {
+			margin-top: rem(52px);
+			padding-right: rem(50px);
+
+			@include r($xs-breakpoint) {
+				margin-top: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+	.section__left {
+		width: percentage(564/1144);
+
+		@include r($xs-breakpoint) {
+			width: 100%;
+		}
+	}
+
+	.section__right {
+		width: percentage(564/1144);
+
+		@include r($xs-breakpoint) {
+			width: 100%;
+			margin-top: rem(18px);
+			padding-right: rem(10px);
+		}
+	}
+
+	.sectionBottom {
+		margin-top: rem(19px);
+
+		@include r($xs-breakpoint) {
+			margin-top: rem(25px);
+			text-align: center;
+		}
+	}
+
+	.textBlock {
+
+		@include r($xs-breakpoint) {
+		    min-height: rem(154px);
+		}
+	}
+}
+
+
+.conceptBoxList {
+	@include cover();
+	position: relative;
+	display: flex;
+	flex-flow: wrap;
+
+	&[style*="background"]:before {
+		content: '';
+		@include coverdiv();
+		background: linear-gradient(0deg, rgba(35, 47, 96, 0.65), rgba(35, 47, 96, 0.65));
+	}
+
+	.conceptBoxList__item {
+		width: 50%;
+		position: relative;
+		padding: rem(31px) rem(40px) rem(40px);
+		min-height: rem(223px);
+		display: flex;
+		flex-flow: column;
+
+		@include r($xs-breakpoint) {
+			//height: 121px;
+			min-height: auto;
+			padding: rem(42px) 20px 20px 37px;
+		}
+
+		&:not(:nth-child(-n+2)) {
+			border-top: 1px solid rgba(#CD9975, .7);
+		}
+
+		&:nth-child(even) {
+			border-left: 1px solid rgba(#CD9975, .7);
+		}
+	}
+
+	.conceptBoxList__numb {
+		font-size: rem(50px);
+		line-height: 110%;
+		color: #AE7B4F;
+		text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+
+		@include r($xs-breakpoint) {
+			font-size: rem(33px);
+			line-height: 120%;
+		}
+	}
+
+	.conceptBoxList__description {
+		font-size: rem(16px);
+		line-height: rem(21px);
+		color: #2A3C83;
+		margin-top: rem(11px);
+		max-width: rem(135px);
+
+		@include r($xs-breakpoint) {
+			font-size: rem(11px);
+			line-height: rem(14px);
+			margin-top: rem(6px);
+			padding-right: rem(20px);
+		}
+	}
+}
+
+.conceptPicture {
+	@include cover();
+	height: 100%;
+	margin-right: -48px;
+
+	@include r($xs-breakpoint) {
+		margin: 0;
+		height: rem(203px);
+	}
+}

@@ -1,0 +1,164 @@
+.selectric-js-select {
+
+	.selectric {
+		border: 0;
+		background-color: transparent;
+		padding: 0 rem(10px);
+
+		.label {
+			height: rem(65px);
+			font-size: rem(20px);
+			line-height: 1;
+			font-weight: 700;
+			color: #2A3C83;
+			display: flex;
+			align-items: center;
+		}
+
+		.button {
+			background-color: #fff;
+			width: rem(40px);
+			height: rem(40px);
+			border-radius: 100%;
+			box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+			position: absolute;
+			top: 50%;
+			right: rem(24px);
+			transform: translateY(-50%);
+
+			&:after {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: rem(5px) rem(5px) 0 rem(5px);
+				border-color: #060826 transparent transparent transparent !important;
+			}
+		}
+	}
+
+
+	&.selectric-open {
+
+		.selectric {
+			background-color: #2A3873;
+
+
+			.label {
+				color: #fff;
+			}
+
+			.button {
+
+				&:after {
+					border-width: 0 rem(5px) rem(5px) rem(5px);
+					border-color: transparent transparent #060826 transparent !important;
+				}
+			}
+		}
+	}
+
+
+	.selectric-items {
+		border: 0;
+		background-color: #fff;
+		box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+		padding: 22px 0;
+
+		li {
+			color: #000;
+			font-size: rem(16px);
+			line-height: rem(21px);
+			font-weight: 700;
+			padding: 0 20px;
+
+			&.highlighted {
+				background-color: transparent;
+
+				.optionItem__title {
+					color: $primary-color;
+				}
+			}
+
+			&:not(:first-child) {
+				margin-top: 19.5px;
+			}
+		}
+
+		.optionItem {
+			display: flex;
+			align-content: center;
+			justify-content: space-between;
+
+			.optionItem__description {
+				font-size: 14px;
+				font-weight: normal;
+				line-height: 1;
+			}
+		}
+	}
+}
+
+
+.selectric-js-select-default {
+
+	&.selectric-open {
+
+		.selectric {
+			box-shadow: none;
+		}
+	}
+
+	.selectric {
+		background: #FFFFFF;
+		box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+		border: 0;
+
+
+
+		.label {
+			font-size: 18px;
+			color: #000;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			margin: 0 62px 0 19px;
+		}
+
+		.button {
+			background-color: #fff;
+			height: 50px;
+
+			&:after {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: rem(5px) rem(5px) 0 rem(5px);
+				border-color: #060826 transparent transparent transparent !important;
+			}
+		}
+	}
+
+	.selectric-items {
+		border: 0;
+		margin-top: 2px;
+		box-shadow: none;
+		background-color: #fff;
+
+		ul {
+			padding: 12px 0;
+		}
+
+
+		li {
+			font-size: rem(18px);
+			color: #000;
+			padding: 10px 19px;
+
+			&.highlighted,
+			&.selected,
+			&:hover {
+				background: #F0EFF5;
+			}
+		}
+	}
+}

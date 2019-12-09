@@ -1,0 +1,33 @@
+.card--unitPreview {
+	position: relative;
+
+	&.card--white {
+
+		.card__title,
+		.card__info {
+			color: #fff;
+		}
+	}
+
+	.card__title {
+		text-transform: uppercase;
+		font-size: rem(20px);
+		line-height: 130%;
+		color: #060826;
+	}
+
+	.card__photo {
+		margin: rem(19px) 0;
+		min-height: rem(130px);
+	}
+
+	.card__info {
+		font-size: rem(20px);
+		line-height: 130%;
+		color: #060826;
+	}
+
+	.card__bottom {
+		margin-top: rem(16px);
+	}
+}

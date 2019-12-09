@@ -1,0 +1,160 @@
+.section--contacts {
+	padding-top: rem(55px);
+	padding-bottom: rem(67px);
+
+	@include r($xs-breakpoint) {
+		padding-top: rem(45px);
+		padding-bottom: rem(57px);
+	}
+
+	.contacts {
+		margin-top: rem(50px);
+
+		@include r($xs-breakpoint) {
+			margin-top: rem(34px);
+		}
+	}
+}
+
+.contacts--row {
+	display: flex;
+	flex-flow: wrap;
+
+	.contacts__column {
+		width: 33.33%;
+
+		@include r($xs-breakpoint) {
+			width: 100%;
+		}
+
+		&:not(:first-child) {
+
+			@include r($xs-breakpoint) {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+.contacts {
+
+
+	&.contacts--reverse {
+
+		.contacts__title {
+			color: $primary-color;
+		}
+
+		.contactsAddress {
+			color: #fff;
+		}
+
+		.contactsMail,
+		.contactsPhone {
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	.contacts__title {
+		margin-bottom: rem(25px);
+
+		@include r($xs-breakpoint) {
+			margin-bottom: 20px;
+		}
+	}
+
+	p {
+		margin: 0;
+	}
+
+}
+
+.contacts__title {
+	font-size: rem(25px);
+	line-height: 130%;
+	color: #2A3C83;
+
+	@include r($xs-breakpoint) {
+		font-size: rem(20px);
+	}
+}
+
+.contactsAddress {
+	font-size: rem(18px);
+	line-height: 130%;
+
+	@include r($xs-breakpoint) {
+		font-size: rem(16px);
+	}
+
+	.contactsAddress__item:not(:first-child) {
+		margin-top: rem(25px);
+	}
+}
+
+.contactsPhone {
+
+	a {
+		font-size: rem(40px);
+		line-height: 130%;
+		color: #2A3C83;
+
+		@include r($xs-breakpoint) {
+			font-size: rem(30px);
+		}
+
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+.contactsMail {
+
+	&:not(:first-child) {
+		margin-top: rem(5px);
+	}
+
+	a {
+		font-size: rem(18px);
+		line-height: 130%;
+		color: #2A3C83;
+
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+
+.contactsCallback {
+	margin-top: rem(27px);
+
+	@include r($xs-breakpoint) {
+		margin-top: rem(61px);
+	}
+
+	.btn {
+		min-width: rem(273px);
+
+		@include r($xs-breakpoint) {
+		    min-width: 100%;
+		}
+	}
+}
+
+.contactsLink {
+
+	@include r($xs-breakpoint) {
+		text-align: center;
+	}
+
+	&:not(:first-child) {
+		margin-top: rem(20px);
+	}
+}

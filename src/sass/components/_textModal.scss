@@ -1,0 +1,163 @@
+.textModal {
+	z-index: 1000;
+	display: none;
+	padding: rem(31px) 0;
+	//background-color: rgba(#060826, .6);
+	background-color: transparent;
+	overflow: hidden;
+
+	@include r($xs-breakpoint) {
+		max-width: 100%;
+		//height: 100%;
+		min-height: 100%;
+	}
+
+	.fancybox-close-small {
+		padding: 0;
+		opacity: 1;
+		right: rem(13px);
+		top: 0;
+		width: 70px;
+		height: 70px;
+
+		@include r($xs-breakpoint) {
+			top: auto;
+			bottom: 0;
+			right: auto;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 60px;
+			height: 60px;
+			margin-bottom: rem(-5px);
+			position: fixed;
+		}
+
+		svg {
+			pointer-events: none;
+		}
+
+		svg path {
+			fill: #fff;
+		}
+	}
+
+	.container {
+		height: 100%;
+	}
+
+	.textModal__inner {
+		background-color: #fff;
+		display: flex;
+		flex-flow: column;
+		max-width: rem(840px);
+		position: relative;
+		min-height: 335px;
+		padding: rem(65px) rem(50px) rem(50px) rem(450px);
+
+
+		&.textModal__inner--noPhoto {
+			padding-left: rem(50px);
+			max-width: rem(572px);
+
+			@include r($xs-breakpoint) {
+				padding-left: rem(25px);
+			}
+		}
+
+		@include r($xs-breakpoint) {
+		    max-width: 100%;
+			padding: rem(35px) rem(25px);
+			//height: 100%;
+			height: auto;
+		}
+
+
+		.text {
+			margin-bottom: 25px;
+		}
+
+		.navModal {
+			margin-top: auto;
+		}
+	}
+
+	.title {
+		font-weight: 500;
+		font-size: rem(28px);
+		color: $secondary-color;
+		padding-right: 20px;
+		line-height: 130%;
+
+		@include r($xs-breakpoint) {
+			padding-right: 0;
+		}
+
+		+ .text {
+			margin-top: rem(21px);
+
+			@include r($xs-breakpoint) {
+				margin-top: rem(21px);
+			}
+		}
+	}
+
+	.photo {
+		position: absolute;
+		top: rem(65px);
+		left: rem(65px);
+
+		@include r($xs-breakpoint) {
+			position: relative;
+			top: 0;
+			left: 0;
+			margin: rem(15px) 0 rem(18px);
+		}
+	}
+
+	.text {
+		font-size: rem(14px);
+		line-height: 140%;
+		color: $secondary-color;
+		margin-top: 5px;
+
+		@include r($xs-breakpoint) {
+			margin-top: 0;
+		}
+	}
+}
+
+.navModal {
+	border-top: 1px solid $secondary-color;
+	padding-top: rem(12px);
+
+	&Link {
+		display: flex;
+
+		&__left {
+			font-size: rem(14px);
+			line-height: 140%;
+			color: $secondary-color;
+			margin-right: 15px;
+		}
+
+		&__right {
+			font-weight: 700;
+			font-size: rem(16px);
+			line-height: 130%;
+			color: $secondary-color;
+			position: relative;
+			padding-left: rem(25px) + rem(18px);
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: rem(-4px);
+				left: 0;
+				width: rem(25px);
+				height: rem(26px);
+				background-image: url('../img/arrow_right.svg');
+				@include cover();
+			}
+		}
+	}
+}

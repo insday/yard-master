@@ -1,0 +1,234 @@
+.section--advantages {
+	padding: rem(94px) 0 rem(100px);
+	position: relative;
+
+	@include r($xs-breakpoint) {
+		padding: rem(70px) 0 rem(96px);
+	}
+
+
+	&.mobileGray {
+
+		@include r($xs-breakpoint) {
+			background: #E6EAEC !important;
+		}
+	}
+
+	&.section--advantagesSecondary {
+		padding: 0;
+
+		.advantagesBlock {
+			width: percentage(711/1240);
+			margin-left: auto;
+
+			@include r($xs-breakpoint) {
+				width: 100%;
+			}
+
+			.advantagesBlock__inner {
+				border-top: 3px solid $secondary-color;
+				width: percentage(484/711);
+				margin: 0 auto;
+				padding: rem(85px) 0 rem(144px);
+
+				@include r($xs-breakpoint) {
+					width: 100%;
+					padding: rem(74px) 23px;
+					border-top: 0;
+				}
+
+				.section__bg {
+
+					@include r($xs-breakpoint) {
+						margin-top: rem(42px);
+						margin-left: -23px;
+						margin-right: -23px;
+					}
+				}
+			}
+		}
+	}
+
+	.section__bg {
+		@include cover();
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: percentage(529/1240);
+
+		@include r($xs-breakpoint) {
+			height: rem(217px);
+			position: relative;
+			width: auto;
+		}
+	}
+
+	.section__inner {
+		display: flex;
+		flex-flow: wrap;
+
+		.section__left {
+			width: percentage(458/1144);
+
+			@include r($xs-breakpoint) {
+				width: 100%;
+			}
+
+			.sectionButton {
+
+				@include r($xs-breakpoint) {
+					display: none;
+				}
+			}
+		}
+
+		.section__right {
+			width: percentage(562/1144);
+			margin-left: auto;
+			padding-top: 42px;
+
+			@include r($xs-breakpoint) {
+				width: 100%;
+				margin-top: rem(60px);
+				padding-top: 0;
+			}
+
+			.sectionButton {
+				display: none;
+
+				@include r($xs-breakpoint) {
+					display: block;
+					margin-top: rem(60px);
+				}
+			}
+		}
+	}
+}
+
+
+.advantagesList {
+	display: flex;
+	flex-flow: wrap;
+
+	.advantagesList__item {
+		width: 50%;
+		position: relative;
+
+		&:not(:nth-child(-n+2)) {
+			margin-top: rem(58px);
+
+			@include r($xs-breakpoint) {
+				margin-top: rem(63px);
+			}
+		}
+
+		&:hover {
+
+			.advantagesList__icon {
+				border: 3px solid $primary-color;
+			}
+
+			.advantagesList__text {
+				color: $primary-color;
+			}
+		}
+	}
+
+	&__link {
+		@include coverdiv();
+	}
+
+	&__icon {
+		width: rem(90px);
+		height: rem(90px);
+		border-radius: 100%;
+		background-color: #fff;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 3px solid transparent;
+		transition: .3s all;
+
+		@include r($xs-breakpoint) {
+			width: rem(70px);
+			height: rem(70px);
+			padding: 10px;
+		}
+	}
+
+	&__text {
+		font-size: rem(15px);
+		line-height: 150%;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #2A3C83;
+		max-width: 30%;
+		font-weight: 500;
+		transition: .3s all;
+
+		@include r($xs-breakpoint) {
+			font-size: rem(12px);
+			font-weight: 700;
+		}
+
+		&:not(:first-child) {
+			margin-top: rem(24px);
+
+			@include r($xs-breakpoint) {
+				margin-top: rem(17px);
+			}
+		}
+	}
+}
+
+.advantageRow {
+
+	&:not(:first-child) {
+		margin-top: 45px;
+
+		@include r($xs-breakpoint) {
+			margin-top: rem(28px);
+		}
+	}
+
+	&.advantageRow--white {
+
+		.advantageRow__item {
+			background-color: #fff;
+			color: $secondary-color;
+		}
+	}
+
+	&__link {
+		@include coverdiv();
+	}
+
+	&__item {
+		font-size: rem(18px);
+		line-height: 130%;
+		color: #FFFFFF;
+		background: rgba(#2A3C83, .75);
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+		padding: rem(13px) rem(22px) rem(12px);
+		position: relative;
+
+
+		@include r($xs-breakpoint) {
+			padding: rem(12px) rem(12px) rem(13px);
+		}
+
+		&:hover {
+
+			.advantageRow__title {
+				color: $primary-color;
+			}
+		}
+
+		&:not(:first-child) {
+			margin-top: rem(8px);
+		}
+	}
+
+}

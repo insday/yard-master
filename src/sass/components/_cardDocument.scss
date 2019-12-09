@@ -1,0 +1,42 @@
+.card--document {
+	position: relative;
+	min-height: rem(48px);
+	display: flex;
+	align-items: center;
+	padding-left: rem(40px) + rem(24px);
+	font-size: rem(16px);
+	line-height: 130%;
+	transition: .3s all;
+
+	&:hover {
+		color: $primary-color;
+	}
+
+	@include r($xs-breakpoint) {
+		font-size: rem(14px);
+		line-height: 140%;
+		padding-left: rem(55px);
+	}
+
+	&.card--white {
+		color: #fff;
+	}
+
+	.card__link {
+		@include coverdiv();
+	}
+
+	.card__icon {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+
+		img {
+			@include r($xs-breakpoint) {
+				width: rem(34px);
+				height: rem(42px);
+			}
+		}
+	}
+}

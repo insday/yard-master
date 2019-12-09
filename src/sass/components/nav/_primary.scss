@@ -1,0 +1,41 @@
+.nav--primary {
+
+	.menu {
+		display: flex;
+		align-items: center;
+		margin: 0 rem(-16px);
+
+
+		@include r($xs-breakpoint) {
+			display: block;
+		}
+
+		.menu__item {
+			margin: 0 rem(16px);
+
+			&:not(:first-child) {
+
+				@include r($xs-breakpoint) {
+					margin-top: rem(8px);
+				}
+			}
+		}
+
+		.menu__link {
+			color: $secondary-color;
+			text-transform: uppercase;
+			font-size: rem(11px);
+			letter-spacing: 0.08em;
+
+			@include r($xs-breakpoint) {
+				font-weight: 700;
+				font-size: rem(18px);
+				line-height: 210%;
+			}
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+}

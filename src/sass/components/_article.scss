@@ -1,0 +1,50 @@
+h1, h2, h3, h4 {
+	font-weight: normal;
+}
+
+h1 {
+}
+
+h2 {
+	font-size: rem(50px);
+	margin: rem(28px) 0;
+
+	@include r($xs-breakpoint) {
+		font-size: rem(33px);
+		margin: rem(22px) 0;
+	}
+}
+
+h3 {
+}
+
+h4 {
+}
+
+h5 {
+}
+
+h6 {
+}
+
+p {
+	font-size: rem(16px);
+	line-height: rem(21px);
+
+	@include r($xs-breakpoint) {
+		font-size: rem(18px);
+		line-height: rem(23px);
+	}
+}
+
+article {
+
+
+	.btn {
+		margin-top: rem(31px);
+
+		@include r($xs-breakpoint) {
+			width: 100%;
+		}
+	}
+}

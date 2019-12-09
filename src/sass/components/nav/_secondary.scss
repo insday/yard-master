@@ -1,0 +1,19 @@
+.nav--secondary {
+
+	ul.menu {
+		display: flex;
+		flex-flow: wrap;
+		margin: 0 -15.5px;
+
+
+		.menu__item {
+			margin: 0 15.5px;
+		}
+
+		a {
+			font-size: rem(18px);
+			line-height: 130%;
+			color: $secondary-color;
+		}
+	}
+}

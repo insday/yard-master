@@ -1,0 +1,57 @@
+.unitCardTable {
+	color: $secondary-color;
+
+	&__title {
+		font-size: rem(20px);
+		line-height: 130%;
+		font-weight: 700;
+		margin-bottom: rem(15px);
+	}
+
+	table {
+		width: 100%;
+		border-spacing: 0;
+
+		th {
+			font-size: rem(11px);
+			line-height: 130%;
+			color: #B6B5C3;
+			text-align: left;
+			font-weight: normal;
+			padding-bottom: rem(14px);
+		}
+
+
+		tr:not(:first-child) {
+
+			td {
+				border-top: 1px solid #525876;
+				padding-top: rem(10px);
+			}
+		}
+
+		td {
+			font-size: rem(14px);
+			padding-bottom: rem(8px);
+
+			&:first-child {
+				font-size: rem(11px);
+				width: 29%;
+			}
+		}
+	}
+}
+
+.unitCardTable__description {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	font-size: rem(16px);
+	line-height: 130%;
+
+	.unitCardTable__price {
+		font-size: rem(20px);
+		font-weight: 700;
+		padding-right: rem(14px);
+	}
+}

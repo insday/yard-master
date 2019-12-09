@@ -1,0 +1,81 @@
+.section--documents {
+	padding-top: rem(55px);
+	padding-bottom: rem(80px);
+	min-height: rem(432px);
+
+	@include r($xs-breakpoint) {
+		padding-top: rem(46px);
+		padding-bottom: rem(66px);
+	}
+
+	.section__inner {
+		display: flex;
+		flex-flow: wrap;
+
+		.section__left {
+			width: percentage(348/1140);
+
+			@include r($xs-breakpoint) {
+				width: 100%;
+			}
+
+			.sectionButton {
+
+				@include r($xs-breakpoint) {
+					display: none;
+				}
+			}
+		}
+
+		.section__right {
+			width: percentage(563/1140);
+			margin-left: auto;
+
+			@include r($xs-breakpoint) {
+				width: 100%;
+				margin-top: 35px;
+			}
+
+			.documentsList {
+				max-width: rem(322px);
+
+				@include r($xs-breakpoint) {
+					padding-left: 20px;
+				}
+			}
+
+			.sectionButton {
+				display: none;
+
+				@include r($xs-breakpoint) {
+					display: block;
+					margin-top: rem(104px);
+				}
+			}
+		}
+	}
+
+	.section__left {
+
+
+		.sectionButton {
+			margin-top: rem(37px);
+
+			.btn {
+				min-width: rem(348px);
+			}
+		}
+	}
+}
+
+
+.documentsList {
+
+	.documentsList__item:not(:first-child) {
+		margin-top: rem(23px);
+
+		@include r($xs-breakpoint) {
+			margin-top: rem(18px);
+		}
+	}
+}

@@ -1,0 +1,96 @@
+{% import "partials/_mixins.html" as mixins %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta name="theme-color" content="#fff"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" media="all" href="css/app.css"/>
+    {# {% include "../partials/_media-tags.html" %} #}
+</head>
+<body class="{{ bodyClass }}">
+
+<!-- BEGIN content -->
+<div class="out">
+    {% include "./_header.html" %}
+    {% block content %}{% endblock %}
+    {% include '../blocks/_modals.html' %}
+</div>
+<!-- END content -->
+
+
+<!-- BEGIN scripts -->
+<script>
+  var previewMapConfig = {
+    zoom: 15,
+    placemarks: [{
+      coords: [59.926841, 30.384598],
+      icon: 'img/marker_main.svg',
+    }]
+  };
+
+
+  var locationMapConfig = {
+    zoom: 15,
+    multiObjects: true,
+    placemarks: [
+      {
+        category: 'main',
+        coords: [59.926841, 30.384598],
+        icon: 'img/marker_main.svg',
+      },
+      {
+        category: '1',
+        coords: [59.933031, 30.343722],
+        icon: 'img/marker.svg',
+      },,
+      {
+        category: '4',
+        coords: [59.924627, 30.385874],
+        icon: 'img/marker.svg',
+      },
+      {
+        category: '4',
+        coords: [59.928647, 30.377545],
+        icon: 'img/marker.svg',
+      },
+    ]
+  };
+
+  var locationMapConfig2= {
+    zoom: 15,
+    multiObjects: true,
+    placemarks: [
+      {
+        category: 'main',
+        coords: [59.926841, 30.384598],
+        icon: 'img/marker_main.svg',
+      },
+      {
+        category: '1',
+        coords: [59.933031, 30.343722],
+        icon: 'img/marker.svg',
+      },,
+      {
+        category: '4',
+        coords: [59.924627, 30.385874],
+        icon: 'img/marker.svg',
+      },
+      {
+        category: '4',
+        coords: [59.928647, 30.377545],
+        icon: 'img/marker.svg',
+      },
+    ]
+  };
+</script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="js/app.js"></script>
+<!-- END scripts -->
+
+</body>
+</html>

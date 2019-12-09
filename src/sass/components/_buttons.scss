@@ -1,0 +1,484 @@
+button,
+.btn {
+	position: relative;
+	display: inline-block;
+	border-radius: 0;
+	border: 0;
+	transition: .3s all;
+	background-color: transparent;
+	text-align: center;
+	padding: 0;
+	cursor: pointer;
+}
+
+.btn--primary {
+	font-size: rem(15px);
+	line-height: 150%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background: #2A3C83;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: rem(15px) rem(64px) rem(13px);
+
+	@include r($xs-breakpoint) {
+		font-size: rem(12px);
+		font-weight: 700;
+		padding: rem(14px) rem(27px) rem(12px);
+	}
+
+	svg.icon-pin {
+		fill: #6F5C4D;
+		margin-left: rem(-40px);
+		margin-right: rem(18px);
+		margin-top: rem(-2px);
+
+		@include r($xs-breakpoint) {
+			width: rem(17px);
+			height: rem(24px);
+			margin-left: rem(-12px);
+		}
+	}
+
+	&:hover {
+		background-color: #211859;
+		color: #fff;
+	}
+}
+
+.btn--secondary {
+	border: 2px solid #2A3873;
+	font-weight: 700;
+	font-size: rem(12px);
+	line-height: 150%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #2A3873;
+	padding: rem(14px) rem(31px) rem(12px);
+
+	@include r($xs-breakpoint) {
+		font-size: rem(12px);
+		font-weight: 700;
+	}
+
+	&:hover {
+		background-color: #2A3873;
+		color: #fff;
+	}
+
+	&.btn--md {
+		font-weight: normal;
+		font-size: rem(15px);
+		line-height: 150%;
+		text-align: center;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #2A3873;
+		min-width: rem(272px);
+
+		@include r($xs-breakpoint) {
+			font-size: rem(12px);
+			font-weight: 700;
+		}
+	}
+
+	&.btn--reverse {
+		border-color: #8F6D4F;
+		color: #fff;
+	}
+}
+
+.btn--scrollDown {
+	font-size: rem(13px);
+	line-height: 1;
+	color: #fff;
+
+	@include r($xs-breakpoint) {
+		font-size: rem(12px);
+		font-weight: 700;
+	}
+
+	&:hover {
+		opacity: .5;
+		color: #fff;
+	}
+
+	svg {
+		fill: #fff;
+		transition: .3s all;
+
+		@include r($xs-breakpoint) {
+			position: relative;
+			top: 2px;
+		}
+
+		&:not(:last-child) {
+			margin-right: rem(10px);
+		}
+
+
+		&.icon-arrow_down {
+			width: rem(17px);
+			height: rem(11px);
+		}
+	}
+}
+
+.btn--link {
+	color: $primary-color;
+	font-size: rem(20px);
+	line-height: 130%;
+
+	@include r($xs-breakpoint) {
+		font-size: rem(18px);
+	}
+
+	&:hover {
+		color: #D6853E;
+	}
+
+	&.btn--sm {
+		font-size: rem(18px);
+	}
+
+	&.btn--colorWhite {
+		color: #fff;
+
+		&:hover {
+			color: #D6853E;
+		}
+	}
+
+	&.btn--colorSecondary {
+		color: #060826;
+
+		&:hover {
+			color: #D6853E;
+		}
+	}
+
+	&.btn--colorPrimary {
+		color: $secondary-color;
+
+		&:hover {
+			color: #D6853E;
+		}
+	}
+}
+
+.btn--filled {
+	background-color: $primary-color;
+	color: #fff;
+	font-size: rem(15px);
+	line-height: 150%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: rem(18px) rem(30px) rem(16px);
+
+	@include r($xs-breakpoint) {
+		font-size: rem(12px);
+		font-weight: 700;
+		padding: rem(16px) rem(30px) rem(14px);
+	}
+
+
+	&:hover {
+		background-color: #D6853E;
+		color: #fff;
+	}
+
+	svg {
+		margin-right: rem(18px);
+		margin-left: rem(-7px);
+	}
+
+	span {
+		white-space: nowrap;
+	}
+
+}
+
+
+.btn--changeContent {
+	//position: fixed;
+	//bottom: rem(89px);
+	//right: rem(72px);
+	width: rem(72px);
+	height: rem(72px);
+	background: #8F6D4F;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+
+	@include r($xs-breakpoint) {
+		width: rem(50px);
+		height: rem(50px);
+	}
+
+	&.is-active {
+		//right: auto;
+		//left: rem(72px);
+
+
+		.btn__state--default {
+			opacity: 0;
+		}
+
+		.btn__state--active {
+			opacity: 1;
+		}
+	}
+
+
+	.btn__state--default svg {
+		width: rem(46px);
+		height: rem(46px);
+		position: relative;
+		bottom: -2px;
+		right: -2px;
+
+		@include r($xs-breakpoint) {
+			width: rem(32px);
+			height: rem(32px);
+		}
+	}
+
+	.btn__state--active {
+		@include coverdiv();
+		opacity: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.btn__state--active svg {
+		width: rem(50px);
+		height: rem(28px);
+
+		@include r($xs-breakpoint) {
+			width: rem(35px);
+			height: rem(20px);
+		}
+	}
+}
+
+.btn--arrowLeft {
+
+	svg {
+		width: rem(26px);
+		height: rem(16px);
+	}
+}
+
+
+.btn--burger {
+
+	.bar {
+		display: block;
+		height: 3px;
+		background-color: $primary-color;
+		margin-left: auto;
+
+		&:not(:first-child) {
+			margin-top: 5px;
+		}
+
+		&:first-child {
+			width: 42px;
+		}
+
+		&:nth-child(2) {
+			width: 48px;
+		}
+
+		&:nth-child(3) {
+			width: 29px;
+		}
+	}
+}
+
+.btn--gallery {
+	font-size: rem(12px);
+	font-weight: 700;
+	color: #fff;
+	line-height: 150%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+
+	svg {
+		margin-right: rem(7px);
+		fill: #fff;
+		vertical-align: middle;
+	}
+}
+
+.btn--linkBorder {
+	font-size: rem(15px);
+	line-height: 150%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #8F6D4F;
+	padding: rem(3px) rem(38px) 0;
+	height: rem(56px);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	@include r($xs-breakpoint) {
+		height: rem(48px);
+		font-size: 12px;
+		font-weight: 700;
+	}
+
+	&:hover {
+		color: $secondary-color;
+	}
+
+	&.is-active {
+		background-color: $primary-color;
+		color: #fff;
+	}
+
+}
+
+.btn--control {
+	width: rem(72px);
+	border: 2px solid $primary-color;
+	height: rem(255px);
+	font-size: rem(14px);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: $secondary-color;
+
+	@include r($xs-breakpoint) {
+		width: rem(45px);
+		height: rem(205px);
+	}
+
+
+	&:hover {
+
+		svg  > *{
+			fill: $primary-color;
+		}
+	}
+
+	&.is-active {
+		background-color: $secondary-color;
+		border-color: $secondary-color;
+		color: #fff;
+		pointer-events: none;
+
+		svg path {
+			fill: #fff;
+		}
+	}
+
+	&.btn--colorPrimary {
+		border-color: #2A3C83;
+
+		&.is-active {
+			background-color: $primary-color;
+			border-color: $primary-color
+		}
+	}
+
+	svg {
+		position: absolute;
+		bottom: rem(20px);
+		left: 50%;
+		transform: translateX(-50%);
+
+		@include r($xs-breakpoint) {
+			bottom: rem(11px);
+		}
+
+		> * {
+			transition: .3s all;
+		}
+	}
+
+	span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transform: rotate(-90deg);
+		white-space: nowrap;
+		height: rem(72px);
+		width: rem(255px);
+		margin-left: rem(-94px);
+		margin-top: rem(89px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: rem(30px);
+
+		@include r($xs-breakpoint) {
+			height: rem(45px);
+			width: rem(205px);
+			margin-left: rem(-81px);
+			margin-top: rem(78px);
+		}
+	}
+}
+
+
+.pageControl {
+
+	.pageControl__inner {
+		height: auto;
+		text-align: right;
+		display: flex;
+		flex-flow: column;
+		align-items: flex-end;
+
+		.btn:not(:first-child) {
+			margin-top: -2px;
+		}
+
+		.btn:first-child svg {
+
+			@include r($xs-breakpoint) {
+				width: rem(25px);
+				height: rem(25px);
+			}
+		}
+
+		.btn:last-child svg {
+
+			@include r($xs-breakpoint) {
+				width: rem(31px);
+				height: rem(18px);
+			}
+		}
+	}
+}
+
+.btn--close {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+	background-color: #fff;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+
+	&:hover {
+		background-color: $secondary-color;
+	}
+
+	svg {
+		fill: #202020;
+	}
+}

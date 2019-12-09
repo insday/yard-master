@@ -1,0 +1,99 @@
+.tabs:not(.units) {
+
+	.tabs__con {
+		display: none;
+		animation: fadeIn .5s forwards ease-in-out;
+
+		&.is-active {
+			display: block;
+		}
+	}
+
+
+	.tabsList {
+		display: inline-flex;
+		margin: 0 rem(-18px);
+		border-bottom: 1px solid #AE7B4F;
+		padding-right: rem(35px);
+
+		@include r($xs-breakpoint) {
+			margin: 0;
+			justify-content: space-between;
+			display: flex;
+			padding-right: 0;
+		}
+
+
+		li:not(:first-child) {
+			margin-left: rem(30px);
+
+			@include r($xs-breakpoint) {
+				margin-left: 0;
+			}
+		}
+
+		a {
+			display: block;
+			font-size: rem(25px);
+			padding: 0 rem(20px) rem(16px);
+			color: $secondary-color;
+			position: relative;
+
+			@include r($xs-breakpoint) {
+				font-size: rem(11px);
+				padding: 0 0 rem(14px);
+			}
+
+			&:hover {
+				color: $primary-color;
+			}
+
+			&.is-active {
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: -6px;
+					left: 0;
+					right: 0;
+					height: 6px;
+					background-color: #AE7B4F;
+				}
+			}
+		}
+	}
+
+	.tabsBox {
+		margin-top: rem(78px);
+		max-width: rem(640px);
+
+		@include r($xs-breakpoint) {
+			margin-top: rem(47px);
+		}
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0.5;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+.tabs.units {
+
+	.tabs__con {
+		display: none;
+		animation: fadeIn .5s forwards ease-in-out;
+
+		&.is-active {
+			display: block;
+		}
+	}
+
+}

@@ -1,0 +1,145 @@
+{% macro icon(i) %}
+    <svg class="icon icon-{{ i }}">
+        <use xlink:href="img/sprite.svg#icon-{{ i }}"></use>
+    </svg>
+{% endmacro %}
+
+{% macro link_button(title, type, href="#") %}
+    <a href="{{ href }}" class="btn btn--{{ type }}">
+        {{ title }}
+    </a>
+{% endmacro %}
+
+{% macro form_button(title, type) %}
+    <div class="form__button">
+        <button type="button" class="btn btn--{{ type }}">
+            {{ title }}
+        </button>
+    </div>
+{% endmacro %}
+
+{% macro field_radio(name, text, class, value) %}
+    <div class="radioButton">
+        <input type="radio" name="{{ name }}"
+               {% if class %}class="{{ class }}"{% endif %} {% if value %}value="{{ value }}"{% endif %}>
+        <div class="radioButton__body">
+            <span>{{ text }}</span>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro field_radio_box(name, title, questionBtn, class, index) %}
+    <div class="radioButton radioButton--box {{ class }}">
+        <input type="radio" name="{{ name }}">
+        <div class="radioButton__body">
+            <div class="radioButton__title">
+                {{ title }}
+
+                {% if questionBtn %}
+                    <a href="http://www.mocky.io/v2/5bd98fac2f00008c0006d1d1"
+                       class="btn btn-question" data-src="#question{{ index }}" data-fancybox>
+                        {{ icon('question') }}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro field_input(name, type='text', class='', placeholder) %}
+    <input type="{{ type }}" class="input {{ class }}"
+           {% if name %}name="{{ name }}"{% endif %} {% if placeholder %}placeholder="{{ placeholder }}"{% endif %} />
+{% endmacro %}
+
+{% macro field_checkbox(label, name="name", checked, center) %}
+    <div class="checkboxButton{% if center %} checkboxButton--center{% endif %}">
+
+        <input type="checkbox" name="{{ name }}" {% if checked %}checked{% endif %}>
+        <label>
+            <span>{{ label }}</span>
+        </label>
+    </div>
+{% endmacro %}
+
+{% macro field_select(name, options, noSelectric="false", class, dataAttrs) %}
+    <select name="{{ name }}"
+            {% if dataAttrs %}{{ dataAttrs }}{% endif %}
+            class="{% if noSelectric === "false" %}js-select{% endif %} {{ class }}">
+        {% for item in options %}
+            {% if item.value %}
+                <option value="{{ item.value }}">{{ item.title }}</option>
+            {% else %}
+                <option value="{{ item }}">{{ item }}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+{% endmacro %}
+
+{% macro form_field(label, class, name, placeholder) %}
+    <div class="form__field">
+        {% if label %}
+            <label class="label">{{ label }}</label>
+        {% endif %}
+        {{ field_input(class=class, name=name, placeholder=placeholder) }}
+    </div>
+{% endmacro %}
+
+{% macro form_textarea(label, class, name) %}
+    <div class="form__field">
+        <label class="label">{{ label }}</label>
+        <textarea name="message" class="textarea"></textarea>
+    </div>
+{% endmacro %}
+
+{% macro form_select(label, options, noSelectric="false", name, class, dataAttrs) %}
+    <div class="form__field">
+        {% if label %}
+            <label class="label">{{ label }}</label>
+        {% endif %}
+        {{ field_select(options=options, noSelectric=noSelectric, name=name, class=class, dataAttrs=dataAttrs) }}
+    </div>
+{% endmacro %}
+
+{% macro form_checkbox(label, name="name", checked, center, class) %}
+    <div class="form__field {{ class }}">
+        {{ field_checkbox(label=label, name=name, checked=checked, center=center) }}
+    </div>
+{% endmacro %}
+
+{% macro sliderBtn(type="", iconBtn) %}
+    <div class="swiper-button swiper-button-{{ type }}">
+        {% if icon %}
+            {{ icon(iconBtn) }}
+        {% endif %}
+    </div>
+{% endmacro %}
+
+{% macro rating_stars(title, value="", class="", hits) %}
+    <div class="rating {{ class }}" {% if value %}data-rating="{{ value }}"{% endif %}>
+        {% if title %}
+            <div class="rating__title">{{ title }}</div>
+        {% endif %}
+        <div class="rating__stars">
+
+            {% if hits %}
+                <span class="color-red">Хит продаж</span>
+            {% endif %}
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro priceBox(sale, salePrice, price="", pricePrefix="руб. / пара") %}
+    <div class="priceBox{% if sale %} priceBox--sale{% endif %}">
+        {% if sale %}
+            <div class="priceBox__offer">
+                <div class="priceBox__old">{{ salePrice }}</div>
+                <div class="priceBox__sale" data-sale="{{ sale }}">
+                    <span>Спец. цена</span>
+                </div>
+            </div>
+        {% endif %}
+        <div class="priceBox__current">
+            <span>{{ price }}</span> {{ pricePrefix }}
+        </div>
+    </div>
+{% endmacro %}

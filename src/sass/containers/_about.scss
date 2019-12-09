@@ -1,0 +1,60 @@
+.section--about {
+	padding-top: rem(75px);
+	padding-bottom: rem(88px);
+
+	@include r($xs-breakpoint) {
+		padding-top: rem(67px);
+		padding-bottom: rem(36px);
+	}
+
+	.section__inner {
+		display: flex;
+		flex-flow: wrap;
+
+		.section__title {
+			width: 100%;
+			margin-bottom: rem(38px);
+
+			@include r($xs-breakpoint) {
+				margin-bottom: rem(20px);
+			}
+		}
+
+
+		.section__left {
+			width: percentage(465/1140);
+
+			@include r($xs-breakpoint) {
+				width: 100%;
+			}
+
+			.textBlock {
+
+				@include r($xs-breakpoint) {
+					font-size: rem(14px);
+					line-height: 145%;
+					padding-right: rem(20px);
+				}
+			}
+		}
+
+
+		.section__right {
+			width: percentage(563/1140);
+			margin-left: auto;
+
+			@include r($xs-breakpoint) {
+				width: 100%;
+				margin-top: rem(22px);
+			}
+
+			.sectionButton {
+				margin-top: rem(47px);
+
+				@include r($xs-breakpoint) {
+					margin-top: rem(41px);
+				}
+			}
+		}
+	}
+}

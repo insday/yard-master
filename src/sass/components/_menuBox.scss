@@ -1,0 +1,62 @@
+.menuBox {
+	background-color: #fff;
+	display: none;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+
+	.menuBox__logo {
+		position: absolute;
+		top: rem(16px);
+		left: 50%;
+		transform: translateX(-50%);
+
+		svg {
+			@include r($xs-breakpoint) {
+				width: rem(122px);
+				height: rem(28px);
+				position: relative;
+				top: -4px;
+			}
+		}
+	}
+
+	.menuBox__inner {
+		height: 100%;
+	}
+
+	.nav--secondary {
+		margin-top: rem(24px);
+	}
+
+	.menuBox__top {
+		min-height: percentage(467/667);
+		padding-top: rem(95px);
+		padding-bottom: rem(20px);
+	}
+
+	.menuBox__bottom {
+		min-height: percentage(200/667);
+		background-color: $secondary-color;
+		margin: 0 rem(-25px) 0;
+		padding: 25px rem(25px);
+
+		.btn--filled {
+			width: 100%;
+		}
+	}
+
+	.menuBox__row {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 25px;
+	}
+
+	.phone {
+		font-size: rem(20px);
+		line-height: 130%;
+		color: #FFFFFF;
+	}
+}
