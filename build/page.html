@@ -1605,7 +1605,7 @@
                       <div class="textBlock textBlock--uppercase"> В пешей доступности — центральные набережные, мост Александра Невского, нескольких станций метро, десятки бутиков, ресторанов, бизнес-центров и супермаркетов. </div>
                     </div>
                     <div class="locationButton">
-                      <a href="javascript:void(0);" class="btn btn--primary" data-toggle-modal data-src="#modalMap2">
+                      <a href="javascript:void(0);" class="btn btn--primary" data-toggle-modal data-src="#modalMap">
                         <svg class="icon icon-pin">
                           <use xlink:href="img/sprite.svg#icon-pin"></use>
                         </svg>
@@ -3094,33 +3094,19 @@
           <div class="mapBox__area" id="mapLocation"></div>
         </div>
       </div>
-      <div class="modal modal--map" id="modalMap2">
-        <a href="#" class="modal__close btn btn--close" data-fancybox-close>
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.34353 5.92893L5.92932 7.34315L11.5862 13L5.92932 18.6569L7.34353 20.0711L13.0004 14.4142L18.6572 20.0711L20.0715 18.6569L14.4146 13L20.0715 7.34315L18.6572 5.92893L13.0004 11.5858L7.34353 5.92893Z" />
-          </svg>
-        </a>
-        <div class="mapBox">
-          <div class="mapBox__controls">
-            <select name="" class="js-select-default js-mapBox-select">
-              <option value="0">Метро</option>
-              <option value="1">Достопримечательности</option>
-              <option value="2">Вокзалы</option>
-              <option value="3">АЗС</option>
-              <option value="4" selected>Магазины и торговые центры</option>
-              <option value="5">Банки</option>
-              <option value="6">Финес-залы</option>
-              <option value="7">Рестораны</option>
-            </select>
-          </div>
-          <div class="mapBox__area" id="mapLocation2"></div>
-        </div>
-      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script>
       var previewMapConfig = {
+        zoom: 15,
+        placemarks: [
+        {
+          coords: [59.926841, 30.384598],
+          icon: 'img/marker_main.svg',
+        }]
+      };
+      var previewMapConfig2 = {
         zoom: 15,
         placemarks: [
         {
@@ -3139,12 +3125,47 @@
         },
         {
           category: '1',
+          coords: [59.932231, 30.343512],
+          icon: 'img/marker.svg',
+        },
+        {
+          category: '1',
+          coords: [59.931331, 30.341412],
+          icon: 'img/marker.svg',
+        },
+        {
+          category: '1',
+          coords: [59.934431, 30.342412],
+          icon: 'img/marker.svg',
+        },
+        {
+          category: '1',
           coords: [59.933031, 30.343722],
           icon: 'img/marker.svg',
-        }, ,
+        },
+        {
+          category: '2',
+          coords: [59.927906, 30.363919],
+          icon: 'img/marker.svg',
+        },
+        {
+          category: '2',
+          coords: [59.9196753, 30.3294997],
+          icon: 'img/marker.svg',
+        },
         {
           category: '4',
-          coords: [59.924627, 30.385874],
+          coords: [59.924627, 30.386874],
+          icon: 'img/marker.svg',
+        },
+        {
+          category: '4',
+          coords: [59.924527, 30.385774],
+          icon: 'img/marker.svg',
+        },
+        {
+          category: '4',
+          coords: [59.924647, 30.384674],
           icon: 'img/marker.svg',
         },
         {
@@ -3164,12 +3185,47 @@
         },
         {
           category: '1',
+          coords: [59.932231, 30.343512],
+          icon: 'img/marker.svg',
+        },
+        {
+          category: '1',
+          coords: [59.931331, 30.341412],
+          icon: 'img/marker.svg',
+        },
+        {
+          category: '1',
+          coords: [59.934431, 30.342412],
+          icon: 'img/marker.svg',
+        },
+        {
+          category: '1',
           coords: [59.933031, 30.343722],
           icon: 'img/marker.svg',
-        }, ,
+        },
+        {
+          category: '2',
+          coords: [59.927906, 30.363919],
+          icon: 'img/marker.svg',
+        },
+        {
+          category: '2',
+          coords: [59.9196753, 30.3294997],
+          icon: 'img/marker.svg',
+        },
         {
           category: '4',
-          coords: [59.924627, 30.385874],
+          coords: [59.924627, 30.386874],
+          icon: 'img/marker.svg',
+        },
+        {
+          category: '4',
+          coords: [59.924527, 30.385774],
+          icon: 'img/marker.svg',
+        },
+        {
+          category: '4',
+          coords: [59.924647, 30.384674],
           icon: 'img/marker.svg',
         },
         {

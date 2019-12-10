@@ -111,10 +111,12 @@ import {styles as StyleMap} from './style';
 
 export function previewMap(idMap, initConfig) {
 
+  const $mapEl = $('#' + idMap);
   const $select = $('.js-mapBox-select');
   const {zoom, placemarks, multiObjects} = initConfig;
-  let map;
+  $mapEl.get(0).map = null;
   let bounds = new google.maps.LatLngBounds();
+  const newMarkers = [];
 
   init();
 
@@ -132,18 +134,20 @@ export function previewMap(idMap, initConfig) {
       // 	style: google.maps.NavigationControlStyle.SMALL
       // }
     };
-    map = new google.maps.Map(document.getElementById(idMap), mapProp);
+    $mapEl.get(0).map = new google.maps.Map(document.getElementById(idMap), mapProp);
+    const markersToRemove = [];
 
     if (multiObjects) {
-      $select.on('change', function () {
-        updateMarkers();
+      $(document).on('change', '.js-mapBox-select', function () {
+        updateMarkers($(this).closest('.mapBox').find('#mapLocation').get(0).map, $(this).closest('.mapBox').find('#mapLocation'));
       });
     }
 
     addMarkersOnMap();
     panByUpdate();
+
     $(window).on('resize', function () {
-      google.maps.event.trigger(map, 'resize');
+      google.maps.event.trigger($mapEl.get(0).map, 'resize');
       panByUpdate();
     });
 
@@ -151,27 +155,27 @@ export function previewMap(idMap, initConfig) {
     $('[data-toggle-modal]').fancybox({
       touch: false,
       afterShow() {
-        map.fitBounds(bounds);
+        $mapEl.get(0).map.fitBounds(bounds);
       }
     })
 
-    function updateMarkers() {
+    function updateMarkers(map, el) {
       map.clearOverlays();
-      addMarkersOnMap();
+      addMarkersOnMap(map);
     }
 
 
-    function addMarkersOnMap() {
-      const newMarkers = [];
+    function addMarkersOnMap(map) {
       const MarkerWithLabel = require('./markerwithlabel.js')(google.maps);
       let placemarksArr = placemarks;
 
       bounds = new google.maps.LatLngBounds();
 
-      if (multiObjects) {
+
+      if (multiObjects || map) {
         placemarksArr = placemarks.filter((item) => {
           return item.category === $select.val() || item.category === 'main';
-        })
+        });
       }
 
       for (let i = 0; i < placemarksArr.length; i++) {
@@ -183,7 +187,7 @@ export function previewMap(idMap, initConfig) {
         const myLatlng = new google.maps.LatLng(data.coords[0], data.coords[1]);
         const marker = new MarkerWithLabel({
           position: myLatlng,
-          map,
+          map: map ? map : $mapEl.get(0).map,
           title: data.title,
           icon: ' ',
           labelContent: templateMarker(data),
@@ -204,7 +208,7 @@ export function previewMap(idMap, initConfig) {
       }
 
       if (placemarksArr.length > 1) {
-        map.fitBounds(bounds);
+        map ? map.fitBounds(bounds) : $mapEl.get(0).map.fitBounds(bounds);
       }
     }
 
@@ -214,9 +218,9 @@ export function previewMap(idMap, initConfig) {
         if (window.outerWidth > 767) {
           const $el = $('.locationBox');
           const data = -($el.offset().left + $el.outerWidth()) / 2;
-          map.panBy(data, 60)
+          $mapEl.get(0).map.panBy(data, 60)
         } else {
-          map.panBy(0, 70)
+          $mapEl.get(0).map.panBy(0, 70)
         }
       }
     }

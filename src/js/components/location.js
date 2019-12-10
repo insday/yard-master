@@ -15,8 +15,8 @@ if (typeof google !== 'undefined' && $('#mapLocation').length) {
 if (typeof google !== 'undefined' && $('#locationMapPreview2').length) {
 	previewMap('locationMapPreview2', previewMapConfig);
 }
-
-
-if (typeof google !== 'undefined' && $('#mapLocation2').length) {
-	previewMap('mapLocation2', locationMapConfig);
-}
+//
+//
+// if (typeof google !== 'undefined' && $('#mapLocation2').length) {
+// 	previewMap('mapLocation2', locationMapConfig2);
+// }
