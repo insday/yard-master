@@ -155,7 +155,7 @@ export function previewMap(idMap, initConfig) {
     $('[data-toggle-modal]').fancybox({
       touch: false,
       afterShow() {
-        $mapEl.get(0).map.fitBounds(bounds);
+        $('#mapLocation').get(0).map.setZoom(15)
       }
     })
 
@@ -191,7 +191,7 @@ export function previewMap(idMap, initConfig) {
           title: data.title,
           icon: ' ',
           labelContent: templateMarker(data),
-          labelAnchor: new google.maps.Point(28, 63),
+          labelAnchor: new google.maps.Point(data.iconWidth / 2, data.iconHeight),
           labelClass: 'marker-title',
           labelInBackground: false
         });

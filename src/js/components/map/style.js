@@ -199,4 +199,13 @@
 // ];
 
 
-export const styles = [];
+export const styles = [
+  {
+    "featureType": "poi",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  }
+];
