@@ -73,7 +73,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.6",
-    "fullpage.js": "^3.0.7",
+    "fullpage.js": "^4.0.5",
     "selectric": "^1.13.0",
     "sticky-sidebar": "^3.3.1",
     "svg4everybody": "^2.1.9",
